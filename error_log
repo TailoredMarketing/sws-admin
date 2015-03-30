@@ -1,0 +1,2 @@
+[30-Mar-2015 13:30:15 UTC] PHP Warning:  include(./pages/index.php.php): failed to open stream: No such file or directory in /home/tailored/tailoreddev.co.uk/clients/sws/index.php on line 28
+[30-Mar-2015 13:30:15 UTC] PHP Warning:  include(): Failed opening './pages/index.php.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/tailored/tailoreddev.co.uk/clients/sws/index.php on line 28
