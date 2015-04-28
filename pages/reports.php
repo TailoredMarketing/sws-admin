@@ -1,45 +1,32 @@
 <?php 
 	
-	if( isset( $_POST['email'] ) ) {
-		$user_id = UUID::v4();	
-		if( isset( $_POST['active'] ) && $_POST['active'] == 1 ) {
-			$active = 1;
-		} else {
-			$active = 0;
-		}
-		if( isset( $_POST['admin'] ) && $_POST['admin'] == 1 ) {
-			$type = 1;
-		} else {
-			$type = 0;
-		}
-		$query = "INSERT INTO user ( userID, userName, userEmail, userPass, userActive, userType ) VALUES ( '$user_id', '$_POST[name]', '$_POST[email]', '$_POST[pass]', '$active', '$type')";
-		if( $result = $db->query( $query ) ) {
-			header("Location:/users/view/?msg");	
-		}
-	}
-
 	if( !isset( $page['action'] ) || $page['action'] == 'view' ) {
-		$result = $db->query( "SELECT * FROM user ORDER BY userName ASC" );
+		$result = $db->query( "SELECT * FROM report INNER JOIN client ON clientID = reportClient ORDER BY userName ASC" );
 ?>
-	<h1>View All Users</h1>
+	<h1>View Reports</h1>
     <table class="table table-hover">
 		<thead>
         	<tr>
-            	<th>Name</th>
-                <th>Email</th>
-                <th class="text-center">Reports</th>
-                <th class="text-center">Added</th>
+            	<th>Date</th>
+                <th>Client</th>
+                <th>Contract</th>
+                <th>Workplace</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-        	<?php while( $data = $result->fetch_assoc() ) { ?>
+        	<?php if( $result ) {
+					while( $data = $result->fetch_assoc() ) { ?>
                 <tr>
-                    <td><?php echo $data['userName']; ?></td>
-                    <td><?php echo $data['userEmail']; ?></td>
-                    <td class="text-center"><a href="/reports/view/?user=<?php echo $data['userID']; ?>/">10</a></td>
-                    <td class="text-center"><?php echo date("d/m/Y", strtotime( $data['userCreated'] ) ); ?></td>
+                    <td><?php echo date("d/m/Y", strtotime( $data['reportDate'] ) ); ?></td>
+                    <td><?php echo $data['clientName']; ?></td>
+                    <td><?php echo $data['reportContract']; ?></td>
+                    <td><?php echo $data['reportWork']; ?></td>
                     <td class="text-right"><a href="/users/view/<?php echo $data['userID']; ?>/" class="btn btn-primary btn-xs"><i class="fa fa-search fa-fw"></i></a> <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash fa-fw"></i></td>
+                </tr>
+            <?php } } else { ?>
+            	<tr>
+                    <td colspan="5">No reports to show</td>
                 </tr>
             <?php } ?>
         </tbody>
