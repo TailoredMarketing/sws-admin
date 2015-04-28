@@ -1,5 +1,5 @@
 <?php
-	require( './inc/class.php' );
+	require( 'class.php' );
 	
 	$db = array(
 			"db_user" => "tailored_sws",
@@ -13,7 +13,7 @@
 		echo "Failed to connect to MySQL: (" . $db->connect_errno . ") " . $db->connect_error;
 		die;
 	}
-	echo dirname( $_SERVER['REQUEST_URI'] ) ;
+	//echo dirname( $_SERVER['REQUEST_URI'] ) ;
 	if( dirname( $_SERVER['REQUEST_URI'] ) != '/ajax' ) {
 		require( './inc/functions.php' );
 		
