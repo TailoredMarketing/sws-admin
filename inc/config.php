@@ -1,5 +1,5 @@
 <?php
-	require( '/inc/class.php' );
+	require( './inc/class.php' );
 	
 	$db = array(
 			"db_user" => "tailored_sws",
