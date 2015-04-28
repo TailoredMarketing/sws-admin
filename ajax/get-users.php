@@ -16,6 +16,8 @@
 			'userEmail' 	=> $item['userEmail'],
 			'userPass' 		=> $item['userPass'],
 			'userType' 		=> $item['userType'],
+			'userActive'	=> $item['userActive'],
+			'userCreated'	=> $item['userCreated'],
 		);		
 	}
 	
