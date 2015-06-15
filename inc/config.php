@@ -15,7 +15,11 @@
 	}
 	//echo dirname( $_SERVER['REQUEST_URI'] ) ;
 	if( dirname( $_SERVER['REQUEST_URI'] ) != '/ajax' ) {
+<<<<<<< HEAD
 		require( 'functions.php' );
+=======
+		require( './inc/functions.php' );
+>>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
 		
 		$url 	= explode( '/', $_SERVER['REQUEST_URI'] );
 		$page = array();

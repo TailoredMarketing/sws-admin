@@ -31,6 +31,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
 <script src="/js/functions.js"></script>
+=======
+>>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
 </body>
 </html>

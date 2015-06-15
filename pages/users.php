@@ -18,7 +18,11 @@
 		}
 	}
 
+<<<<<<< HEAD
 	if( !isset( $page['action'] ) || $page['action'] == 'all' ) {
+=======
+	if( !isset( $page['action'] ) || $page['action'] == 'view' ) {
+>>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
 		$result = $db->query( "SELECT * FROM user ORDER BY userName ASC" );
 ?>
 	<h1>View All Users</h1>
@@ -27,7 +31,10 @@
         	<tr>
             	<th>Name</th>
                 <th>Email</th>
+<<<<<<< HEAD
                 <th>Password</th>
+=======
+>>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
                 <th class="text-center">Reports</th>
                 <th class="text-center">Added</th>
                 <th></th>
@@ -38,10 +45,16 @@
                 <tr>
                     <td><?php echo $data['userName']; ?></td>
                     <td><?php echo $data['userEmail']; ?></td>
+<<<<<<< HEAD
                     <td><?php echo $data['userPass']; ?></td>
                     <td class="text-center"><a href="/reports/view/?user=<?php echo $data['userID']; ?>/">10</a></td>
                     <td class="text-center"><?php echo date("d/m/Y", strtotime( $data['userCreated'] ) ); ?></td>
                     <td class="text-right"><a href="/users/view/<?php echo $data['userID']; ?>/" class="btn btn-primary btn-xs"><i class="fa fa-search fa-fw"></i></a> <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash fa-fw"></i></a></td>
+=======
+                    <td class="text-center"><a href="/reports/view/?user=<?php echo $data['userID']; ?>/">10</a></td>
+                    <td class="text-center"><?php echo date("d/m/Y", strtotime( $data['userCreated'] ) ); ?></td>
+                    <td class="text-right"><a href="/users/view/<?php echo $data['userID']; ?>/" class="btn btn-primary btn-xs"><i class="fa fa-search fa-fw"></i></a> <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash fa-fw"></i></td>
+>>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
                 </tr>
             <?php } ?>
         </tbody>
