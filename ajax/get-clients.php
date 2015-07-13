@@ -14,6 +14,7 @@
 			'clientID' 		=> $item['clientID'],
 			'clientName' 	=> $item['clientName'],
 			'clientEmail' 	=> $item['clientEmail'],
+			'clientLogo' 	=> $item['clientLogo'],
 			'clientActive'	=> $item['clientActive'],
 			'clientCreated'	=> $item['clientCreated'],
 		);		

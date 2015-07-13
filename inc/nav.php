@@ -11,7 +11,6 @@
         <li <?php echo ( !isset( $page['page'] ) || $page['page'] == '' ? 'class="active"' : '' ); ?>><a href="#">Dashboard</a></li>
         <li class="dropdown <?php echo ( isset( $page['page'] ) && $page['page'] == 'reports' ? ' active "' : '' ); ?>"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reports <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-<<<<<<< HEAD
             <li><a href="/reports/all/">View Reports</a></li>
           </ul>
         </li>
@@ -24,7 +23,6 @@
         <li class="dropdown <?php echo ( isset( $page['page'] ) && $page['page'] == 'users' ? ' active ' : '' ); ?>"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Users <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="/users/all/">View Users</a></li>
-=======
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
@@ -48,7 +46,6 @@
         <li class="dropdown <?php echo ( isset( $page['page'] ) && $page['page'] == 'users' ? ' active "' : '' ); ?>"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Users <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="/users/view/">View Users</a></li>
->>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
             <li><a href="/users/new/">New User</a></li>
           </ul>
         </li>

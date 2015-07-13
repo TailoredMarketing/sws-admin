@@ -1,12 +1,9 @@
 <?php 
 	
-<<<<<<< HEAD
 	if( !isset( $page['action'] ) || $page['action'] == 'all' ) {
 		$result = $db->query( "SELECT * FROM report INNER JOIN client ON clientID = reportClient ORDER BY reportDate ASC" );
-=======
-	if( !isset( $page['action'] ) || $page['action'] == 'view' ) {
-		$result = $db->query( "SELECT * FROM report INNER JOIN client ON clientID = reportClient ORDER BY userName ASC" );
->>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
+	/*if( !isset( $page['action'] ) || $page['action'] == 'view' ) {
+		$result = $db->query( "SELECT * FROM report INNER JOIN client ON clientID = reportClient ORDER BY userName ASC" );*/
 ?>
 	<h1>View Reports</h1>
     <table class="table table-hover">
@@ -27,11 +24,8 @@
                     <td><?php echo $data['clientName']; ?></td>
                     <td><?php echo $data['reportContract']; ?></td>
                     <td><?php echo $data['reportWork']; ?></td>
-<<<<<<< HEAD
                     <td class="text-right"><a href="/users/view/<?php echo $data['userID']; ?>/" class="btn btn-primary btn-xs"><i class="fa fa-search fa-fw"></i></a> <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash fa-fw"></i></a></td>
-=======
-                    <td class="text-right"><a href="/users/view/<?php echo $data['userID']; ?>/" class="btn btn-primary btn-xs"><i class="fa fa-search fa-fw"></i></a> <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash fa-fw"></i></td>
->>>>>>> f982a3c5f5a7c464d7b2406249f4cd39d0ae4149
+
                 </tr>
             <?php } } else { ?>
             	<tr>
