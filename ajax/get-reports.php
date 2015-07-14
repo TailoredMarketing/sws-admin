@@ -17,7 +17,7 @@
 			'reportContract' 	=> $item['reportContract'],
 			'reportDate'		=> $item['reportDate'],
 			'reportTime'		=> $item['reportTime'],
-			'reportTick'		=> $item['reportTick'],
+			'reportTick'		=> json_decode($item['reportTick']),
 			'reportUser'		=> $item['reportUser'],
 			'reportClientSig'	=> $item['reportClientSig'],
 			'reportUserSig'	=> $item['reportUserSig'],
