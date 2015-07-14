@@ -10,7 +10,7 @@
 	$output = array();
 	
 	while( $item = $result->fetch_assoc() ) {
-		$output[$item['clientID']] = array (
+		$output[$item['reportID']] = array (
 			'reportID' 		=> $item['reportID'],
 			'reportClient' 	=> $item['reportID'],
 			'reportWork' 	=> $item['reportWork'],
