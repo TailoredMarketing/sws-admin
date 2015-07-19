@@ -12,8 +12,8 @@
 	$obsObs 			= $db->real_escape_string( $_POST['obsObs'] );
 	$obsPriority 	= $db->real_escape_string( $_POST['obsPriority'] );
 	
-	$query = "INSERT INTO obs ( obsID, obsReport, obsItem, obsItem, obsObs, obsPriority ) VALUES ( '$obsID', '$obsReport', '$obsItem', '$obsObs', '$obsPriority' )";
-	echo $query;
+	$query = "INSERT INTO obs ( obsID, obsReport, obsItem, obsObs, obsPriority ) VALUES ( '$obsID', '$obsReport', '$obsItem', '$obsObs', '$obsPriority' )";
+	//echo $query;
 	if( $db->query( $query ) ) {
 		$output = array(
 			'status' => 1
