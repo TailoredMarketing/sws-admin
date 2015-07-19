@@ -4,7 +4,7 @@
 	
 	require( '../inc/config.php' );
 	
-	$output = array(); 
+	$output = array();  
 	
 	$obsID 			= $db->real_escape_string( $_POST['obsID'] );
 	$obsReport 		= $db->real_escape_string( $_POST['obsReport'] );
